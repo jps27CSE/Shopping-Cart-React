@@ -1,8 +1,10 @@
 import Product from './Product'
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useContext } from 'react'
+import {CartContext} from '../CartContext'
 const Products = () => {
 
     const [products,setProducts] = useState([])
+//    const {name} = useContext(CartContext)
 
     useEffect(() =>{
         fetch('https://jsonplaceholder.typicode.com/users')
