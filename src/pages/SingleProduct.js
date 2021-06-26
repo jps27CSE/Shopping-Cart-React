@@ -5,7 +5,7 @@ const SingleProduct = () => {
 
     const [product, setProduct] = useState({})
     const params = useParams()
-    console.log(params)
+    // console.log(params)
     const history = useHistory()
 
    

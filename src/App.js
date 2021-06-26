@@ -13,12 +13,17 @@ function App() {
 
     useEffect(()=>{
         const cart= window.localStorage.getItem('cart') 
+        setCart(JSON.parse(cart))
     },[]) 
+
+    useEffect(()=>{
+      window.localStorage.setItem('cart',JSON.stringify(cart)) 
+    },[cart]) 
 
     return (
         <>
             <Router>
-                <CartContext.Provider value={{ name: 'jack pritom' }}>
+                <CartContext.Provider value={{cart,setCart}}>
                     <Navigation />
                     <Switch>
                         <Route path="/" component={Home} exact ></Route>
