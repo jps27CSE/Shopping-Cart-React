@@ -32,8 +32,8 @@ const Product = (props) => {
             _cart.items[product.id] = 1
         }
 
-        if (!_cart.items) {
-            _cart.items = 0
+        if (!_cart.totalItems) {
+            _cart.totalItems = 0
         }
         _cart.totalItems += 1
 
